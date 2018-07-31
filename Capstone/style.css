@@ -1,0 +1,589 @@
+html {
+  font-size: 16px;
+  font-family: "segoe UI";
+}
+/*
+div {
+    border: 1px solid black;
+}
+*/
+/* This lays out the full border in which all the other containers sit - to varying degrees */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  width: 1388px; /*This used to be 100% - but this changes everything when the screen gets too shrunck and everythingin block jumps around - review strategy later */
+  vertical-align: baseline;
+  margin: 0 auto auto auto;
+}
+
+@media only screen and (max-width: 480px) {
+  .layout-container {
+    display: flex;
+    width: 480px;
+    flex-direction: column;
+  }
+}
+
+/* This top container needs some refining - the actual container specs should be used over again in other container width specs ... */
+
+.topcontainer {
+  display: flex;
+  /*position: fixed;  check - - - -*/
+  height: 4rem;
+  margin: 16px 24px;
+}
+
+@media only screen and (max-width: 480px) {
+  .topcontainer {
+    display: none;
+  }
+}
+
+header {
+  display: flex;
+  z-index: 1;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo img {
+  height: 3rem;
+}
+
+/* Turn off logo settings in logo - it recreated later on */
+@media only screen and (max-width: 480px) {
+  .logo {
+    display: none;
+  }
+}
+
+.colmar1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+/* - - - - Unnecessary - - - - -
+@media only screen and (max-width: 480px) {
+  .colmar1 {
+    display: none;
+  }
+}
+*/
+.academy1 {
+  color: darkgrey;
+  font-size: 1.5rem;
+}
+/* - - - - Unnecessary - - - - -
+@media only screen and (max-width: 480px) {
+  .academy1 {
+    display: none;
+  }
+}
+*/
+nav {
+  display: flex;
+}
+
+nav span {
+  display: inline-block;
+  align-items: center;
+  padding-top: 24px;
+  padding-right: 16px;
+}
+/* Turn off all mobile for header settings while screen is greater than 480px */
+
+@media only screen and (min-width: 480px) {
+  .mobile-top {
+    display: none;
+  }
+}
+
+/* Turning off all desktop setting for header */
+@media only screen and (max-width: 480px) {
+  nav {
+    display: none;
+  }
+}
+
+/* switching on mobile-header setting for small screen */
+@media only screen and (max-width: 480px) {
+  .mobile-top {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+
+
+
+
+
+/* Second container . . . .  Should borrow some attributes from the first one like the margins at least if can */
+
+@media only screen and (max-width: 480px) {
+  .secondcontainer {
+    display: none;
+  }
+}
+
+.secondcontainer {
+  width 100%;
+  background-color: lightgrey;
+}
+
+.inset-container {
+  margin: 32px 24px;
+  display: flex;
+}
+
+.secondcontainer .inset-container .second-container-left {
+  width: 60%;
+  margin-right: 24px;
+}
+
+.secondcontainer .inset-container img {
+  width: 100%;
+  height: 592px;
+}
+
+.right {
+  padding-left: 24px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contentheading {
+  padding: 6rem 120px 12px 0;
+  flex-wrap: nowrap;
+}
+
+h1 {
+  font-weight: bolder;
+  font-family: sans-serif;
+  font-size: 2.7rem;
+  color: rgba(90, 90, 90, 1);
+  line-height: 3rem;
+  /*letter-spacing: 1px;*/
+}
+
+.content-comment {
+  padding: 12px 120px 24px 0;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(70, 70, 70, 1);
+}
+
+.second-bottom-right {
+  max-width: 100%;
+  padding: 0 160px 144px 0;
+  text-align: center;
+
+}
+/*
+.second-bottom-right a {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+*/
+.btn-main {
+  display: block;
+  background-color: rgba(75, 75, 75, 1);
+  color: white;
+  width: 100%;
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-main:hover {
+  background-color: rgba(50, 125, 205, 0.5);
+  color: rgba(255, 204, 0, 1);
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 480px) {
+  .second-container-mobile {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .second-container-mobile img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .second-mobile-container-cont {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .second-mobile-container-cont {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: lightgrey;
+  }
+}
+/*
+@media only screen and (max-width: 480px) {
+  div {
+    border: 1px solid black;
+  }
+}
+*/
+/* third container */
+  /* inset-container creates the margins */
+    /* Tackle the left container within the third container first */
+
+/* This breaks some stuff - may need to take it out - Trying to help "fourth-container-left-bottom - - - By breaks - I mean you may have to fix the margins or padding on third-cont-left-bottom */
+/* swicth off 3rd container for mobile */
+@media only screen and (max-width: 480px) {
+  .third-container {
+    display: none;
+  }
+}
+
+.third-container-left-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.third-container .inset-container .third-container-left {
+  width: 60%;
+  margin-right: 24px;
+}
+
+.third-container .third-container-left img {
+  width: 100%;
+}
+
+.third-container .third-container-left h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: rgba(70, 70, 70, 1);
+  margin: 32px 0 24px 0;
+}
+
+.third-container .third-container-left h4 {
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: rgba(70, 70, 70, 1);
+  margin: 32px 0 32px 0;
+}
+
+/* Third container right */
+.third-container-right {
+  width: 40%;
+  padding-left: 24px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+}
+
+.third-container-right-small {
+  display:inline-flex;
+  /*padding-bottom: 16px;*/
+}
+
+.img-container {
+  width: 35%;
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+}
+
+.content-heading-small {
+  padding-top: 40px;
+}
+@media only screen and (max-width: 480px) {
+  .content-heading-small {
+    padding-top: 40px;
+  }
+}
+
+.content-comment-small {
+  padding: 8px 0 8px 0;
+}
+
+.content-button-small a {
+  text-decoration: none;
+  color: rgb(25, 52, 200);
+}
+
+.content-button-small a:hover {
+  background-color: rgba(50, 125, 205, 0.5);
+  color: rgba(255, 204, 0, 1);
+}
+
+.third-container-right-small:hover {
+  background-color: lightgrey;
+}
+
+/*Mobile third contanier */
+@media only screen and (max-width: 480px) {
+  .mobile-third-container {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .mobile-third-container img {
+    height: auto;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .mobile-third-container {
+    display: none;
+  }
+}
+
+/* Beginning fourth container - - - A top header type thing, Then a inset-continer "sort of" - with 6 smaller containers that I think use space-around */
+
+@media only screen and (max-width: 480px) {
+  .fourth-container-head, .fourth-container-header {
+    display: none;
+  }
+}
+
+.fourth-container-head {
+  width: 100%;
+  display: flex;
+  background-color: lightgrey;
+  /*justify-content: center;*/ /* - - - - Not needed, but does work - - - */
+}
+
+.fourth-container-header {
+  font-size: 3rem;
+  width: 100%;
+  font-weight: bold;
+  color: rgba(70, 70, 70, 1);
+  margin: 32px 0 32px 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .fourth-container {
+    display: none;
+  }
+}
+
+.fourth-container {
+  background-color: lightgrey;
+}
+
+.inset-for-the-six {
+  display: flex;
+  margin: 0 56px 32px 56px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.one-of-six-medium-containers {
+  width: 393.33px;
+  height: auto;
+  margin:0 auto 32px auto;
+  background-color: white;
+}
+
+.medium-img-container img {
+  height: auto;
+  width: 393.33px;
+}
+
+/* This all says third-container - but it is just borrowing some of the attriutes - - - Still working on the fourth contaner*/
+.third-container-left-bottom h3 {
+  margin: 16px auto auto 16px;
+}
+
+.third-container-left-bottom h4 {
+  color: dimgrey;
+  font-size: 1.25rem;
+  margin: 16px auto 8px 16px;
+}
+
+.third-container-left-bottom p {
+  color: dimgrey;
+  font-size: 1.25rem;
+  margin: 16px auto 24px 16px;
+}
+
+/* 4th Container mobile */
+@media only screen and (min-width: 480px) {
+  .fourth-container-mobile, .mobile-vid-container {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .fourth-container-mobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .fourth-cont-top-heading {
+    display: flex;
+    text-align: center;
+    margin: 32px auto 16px auto;
+  }
+  .fourth-cont-top-heading h2 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: rgba(70, 70, 70, 1);
+  }
+  .fourth-cont-greys {
+    background-color: lightgrey;
+    padding: 16px 0 24px 16px;
+    margin: 8px 16px;
+    border-radius: 5%;
+  }
+  .fourth-cont-greys:hover {
+    background-color: orange;
+  }
+
+
+
+/* Fifth container - - - Thesis exhibit */
+
+@media only screen and (max-width: 480px) {
+  .fifth-container, .fifth-container-header {
+    display: none;
+  }
+  .mobile-vid-container video {
+    width: 480px;
+    height: auto;
+  }
+}
+
+.fifth-container-head {
+  width: 100%;
+  display: flex;
+}
+
+.fifth-container-header {
+  font-size: 3rem;
+  width: 100%;
+  font-weight: bold;
+  color: rgba(70, 70, 70, 1);
+  margin: 32px 0 32px 0;
+  text-align: center;
+}
+
+.fifth-inset-container {
+  display: flex;
+  margin: auto 8px 32px 24px;
+}
+
+.fifth-container-left {
+  width: 60%;
+  padding-right: 12px;
+}
+
+.fifth-container-left video {
+  width: 100%;
+  height: auto;
+}
+
+.fifth-container-right {
+  width: 40%;
+}
+
+.fifth-container-right-small {
+  display: flex;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+}
+
+.fifth-container-right-small:hover {
+  background-color: lightgrey;
+}
+
+.last-img-container {
+  width: 35%;
+  height: auto;
+}
+
+.last-img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+/* - - - Footer - - - */
+
+@media only screen and (max-width: 480px) {
+  .last-container, .terms, .privacy {
+    display: none;
+  }
+}
+
+.last-container {
+  display: flex;
+  height: 4rem;
+  margin: 16px 24px;
+}
+
+footer {
+  display: flex;
+  z-index: 1;
+  width: 100%;
+}
+
+.last-container .copyright {
+  color: dimgrey;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.last-container a {
+  text-decoration: none;
+  color: dimgrey;
+}
+
+.terms {
+  padding-right: 8px;
+}
+
+.terms a:hover {
+  color: red;
+  font-weight: bold;
+  transition-property: color;
+  transition-property: font-size;
+  font-size: 6rem;
+  transition-duration: 2s;
+}
+
+.privacy a:hover {
+  color: green;
+  font-weight: bold;
+  transition-property: color;
+  transition-property: font-size;
+  font-size: 6rem;
+  transition-duration: 2s;
+}
