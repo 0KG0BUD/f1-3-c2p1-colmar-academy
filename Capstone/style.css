@@ -433,11 +433,13 @@ h3 {
 }
 
 /* 4th Container mobile */
+
 @media only screen and (min-width: 480px) {
   .fourth-container-mobile, .mobile-vid-container {
     display: none;
   }
 }
+
 @media only screen and (max-width: 480px) {
   .fourth-container-mobile {
     display: flex;
@@ -446,6 +448,7 @@ h3 {
     justify-content: space-between;
   }
 }
+
 @media only screen and (max-width: 480px) {
   .fourth-cont-top-heading {
     display: flex;
@@ -466,10 +469,24 @@ h3 {
   .fourth-cont-greys:hover {
     background-color: orange;
   }
-
+}
 
 
 /* Fifth container - - - Thesis exhibit */
+
+@media only screen and (min-width: 480px) {
+  .fourth-container-mobile {
+    display: none;
+  }
+}
+
+
+@media only screen and (min-width: 480px) {
+  .mobile-vid-container {
+    display: none;
+  }
+}
+
 
 @media only screen and (max-width: 480px) {
   .fifth-container, .fifth-container-header {
@@ -478,6 +495,12 @@ h3 {
   .mobile-vid-container video {
     width: 480px;
     height: auto;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .fifth-container, .fifth-container-header {
+    display: block;
   }
 }
 
@@ -538,7 +561,7 @@ h3 {
 /* - - - Footer - - - */
 
 @media only screen and (max-width: 480px) {
-  .last-container, .terms, .privacy {
+  .terms, .privacy {
     display: none;
   }
 }
